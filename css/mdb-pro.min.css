@@ -260,6 +260,7 @@
   [type="button"],
   [type="reset"],
   [type="submit"] {
+    appearance: button;
     -webkit-appearance: button;
   }
   
@@ -274,7 +275,7 @@
   [type="button"]::-moz-focus-inner,
   [type="reset"]::-moz-focus-inner,
   [type="submit"]::-moz-focus-inner {
-    padding: 0;
+    padding: 2;
     border-style: none;
   }
   
@@ -288,6 +289,7 @@
   input[type="time"],
   input[type="datetime-local"],
   input[type="month"] {
+    appearance: listbox;
     -webkit-appearance: listbox;
   }
   
@@ -326,6 +328,7 @@
   
   [type="search"] {
     outline-offset: -2px;
+    appearance: none;
     -webkit-appearance: none;
   }
   
@@ -11682,24 +11685,29 @@
    }
    
    .fa-rotate-90 {
-     -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
-     -webkit-transform: rotate(90deg);
-     transform: rotate(90deg)
-   }
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg)
+  }
+  
    
    .fa-rotate-180 {
+    filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1); 
      -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
      -webkit-transform: rotate(180deg);
      transform: rotate(180deg)
    }
    
    .fa-rotate-270 {
+    filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1); 
      -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
      -webkit-transform: rotate(270deg);
      transform: rotate(270deg)
    }
    
    .fa-flip-horizontal {
+    filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1); 
      -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
      -webkit-transform: scaleX(-1);
      transform: scaleX(-1)
@@ -11713,6 +11721,7 @@
    .fa-flip-both,
    .fa-flip-horizontal.fa-flip-vertical,
    .fa-flip-vertical {
+    filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1); 
      -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)"
    }
    
